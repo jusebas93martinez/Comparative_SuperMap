@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comparativa SIG: SuperMap vs QGIS vs ESRI (ArcGIS)</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f3f5f9;
+        padding: 40px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+
+      .comparative-table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        border-radius: 12px;
+        background-color: #ffffff;
+      }
+
+      .comparative-table thead {
+        background-color: #16a085;
+        color: white;
+      }
+
+      .comparative-table th,
+      .comparative-table td {
+        padding: 16px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .comparative-table th {
+        font-size: 16px;
+      }
+
+      .comparative-table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .comparative-table tbody tr:hover {
+        background-color: #e8f6f3;
+        transition: background-color 0.3s ease;
+      }
+
+      .supermap {
+        background-color: rgba(144, 238, 144, 0.5); /* Verde transparente */
+        border-left: 4px solid #1abc9c;
+      }
+
+      .qgis {
+        background-color: #fffce6;
+        border-left: 4px solid #f1c40f;
+      }
+
+      .esri {
+        background-color: rgba(255, 182, 193, 0.5); /* Rojo transparente */
+        border-left: 4px solid #e74c3c;
+      }
+
+      @media (max-width: 768px) {
+        .comparative-table th,
+        .comparative-table td {
+          font-size: 13px;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Comparativa Completa y Ampliada: SuperMap vs QGIS vs ESRI (ArcGIS)</h1>
+
+    <table class="comparative-table">
+      <thead>
+        <tr>
+          <th>Criterio</th>
+          <th>SuperMap</th>
+          <th>QGIS</th>
+          <th>ESRI (ArcGIS)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Capacidades CAD</td>
+          <td class="supermap">
+            Soporte directo a DWG, DXF, integración BIM-CAD. Facilita la
+            colaboración entre arquitectos e ingenieros civiles.
+          </td>
+          <td class="qgis">Visualización básica de archivos CAD.</td>
+          <td class="esri">
+            Importación básica, mayor integración con ArcGIS Pro (puede requerir
+            licencias adicionales).
+          </td>
+        </tr>
+        <tr>
+          <td>Interacción con sensores remotos</td>
+          <td class="supermap">
+            Procesamiento de imágenes satelitales en la nube, facilitando el
+            análisis de grandes volúmenes de datos.
+          </td>
+          <td class="qgis">
+            Procesamiento raster mediante plugins, puede requerir más
+            configuración y recursos locales.
+          </td>
+          <td class="esri">Image Server (licencia adicional).</td>
+        </tr>
+        <tr>
+          <td>Gestión de activos territoriales</td>
+          <td class="supermap">
+            Gestión SIG catastral, infraestructura, planificación urbana con
+            herramientas específicas.
+          </td>
+          <td class="qgis">
+            Requiere complementos y desarrollos propios para alcanzar la misma
+            funcionalidad.
+          </td>
+          <td class="esri">Módulos específicos (licencias adicionales).</td>
+        </tr>
+        <tr>
+          <td>Herramientas de edición SIG</td>
+          <td class="supermap">
+            Edición topológica avanzada en desktop y web, facilitando la
+            colaboración y el trabajo remoto.
+          </td>
+          <td class="qgis">
+            Edición topológica completa en desktop, pero limitada en web.
+          </td>
+          <td class="esri">Completa en desktop, limitada en web.</td>
+        </tr>
+        <tr>
+          <td>Integración con drones</td>
+          <td class="supermap">
+            Análisis fotogramétrico de raster, facilitando la integración de
+            datos capturados por drones.
+          </td>
+          <td class="qgis">
+            Requiere complementos externos como OpenDroneMap, complicando el
+            flujo de trabajo.
+          </td>
+          <td class="esri">Drone2Map (licencia aparte).</td>
+        </tr>
+        <tr>
+          <td>Desarrollo backend SIG</td>
+          <td class="supermap">
+            REST API, Node.js, Java, Python, C#, facilitando la integración con
+            diversas plataformas.
+          </td>
+          <td class="qgis">
+            PyQGIS, C++, puede limitar la flexibilidad en comparación con
+            SuperMap.
+          </td>
+          <td class="esri">
+            ArcPy, Python API, puede requerir más esfuerzo para integraciones
+            complejas.
+          </td>
+        </tr>
+        <tr>
+          <td>Estándares OGC</td>
+          <td class="supermap">
+            WMS, WFS, WMTS, CSW, SOS totalmente compatibles, facilitando la
+            interoperabilidad.
+          </td>
+          <td class="qgis">Compatibilidad completa con estándares OGC.</td>
+          <td class="esri">
+            Soporte parcial o controlado vía servicios, puede limitar la
+            interoperabilidad.
+          </td>
+        </tr>
+        <tr>
+          <td>Mapas temáticos y simbología</td>
+          <td class="supermap">
+            Símbolos 2D/3D personalizables y estilos avanzados, mejorando la
+            presentación de datos.
+          </td>
+          <td class="qgis">
+            Amplia personalización de simbología, pero puede requerir más
+            configuración manual.
+          </td>
+          <td class="esri">
+            Estilos avanzados en ArcGIS Pro (puede requerir licencias
+            adicionales).
+          </td>
+        </tr>
+        <tr>
+          <td>Tableros e informes web</td>
+          <td class="supermap">
+            Dashboards SIG personalizados, facilitando la visualización y
+            análisis de datos en tiempo real.
+          </td>
+          <td class="qgis">
+            Requiere plugins externos para alcanzar la misma funcionalidad.
+          </td>
+          <td class="esri">
+            Dashboards en ArcGIS Online (puede requerir suscripciones
+            adicionales).
+          </td>
+        </tr>
+        <tr>
+          <td>Sistema de permisos multiusuario</td>
+          <td class="supermap">
+            Roles personalizados y gestión de seguridad integrada, facilitando
+            la administración de usuarios y permisos.
+          </td>
+          <td class="qgis">
+            Limitado al entorno del servidor, complicando la gestión de
+            permisos.
+          </td>
+          <td class="esri">
+            Roles en ArcGIS Enterprise (puede requerir configuraciones
+            adicionales).
+          </td>
+        </tr>
+        <tr>
+          <td>Análisis espacial avanzado</td>
+          <td class="supermap">
+            Análisis vectorial, raster, espacio-tiempo, redes, superposición,
+            buffer, interpolación, análisis de densidad, análisis de
+            visibilidad, análisis de terreno, y más.
+          </td>
+          <td class="qgis">
+            Módulos vectoriales y raster avanzados, pero puede requerir más
+            configuración.
+          </td>
+          <td class="esri">
+            Módulos especializados como Spatial Analyst (pueden requerir
+            licencias adicionales).
+          </td>
+        </tr>
+        <tr>
+          <td>Plataformas múltiples</td>
+          <td class="supermap">
+            iServer para servicios web, iClient para aplicaciones de escritorio,
+            iTablet para dispositivos móviles, integrando un entorno global
+            cohesivo.
+          </td>
+          <td class="qgis">
+            QGIS Server para servicios web, pero carece de soluciones integradas
+            para móviles y escritorio.
+          </td>
+          <td class="esri">
+            ArcGIS Online, ArcGIS Pro, y aplicaciones móviles, ofreciendo una
+            integración robusta pero costosa.
+          </td>
+        </tr>
+        <tr>
+          <td>Desarrollo libre e integración</td>
+          <td class="supermap">
+            Integración con React, JavaScript, MapLibre, Mapbox, OpenStreetMap,
+            permitiendo un desarrollo flexible y personalizado.
+          </td>
+          <td class="qgis">
+            Desarrollo abierto con PyQGIS y plugins, pero puede requerir más
+            esfuerzo para integraciones complejas.
+          </td>
+          <td class="esri">
+            ArcGIS API para JavaScript, integración con diversas bibliotecas,
+            pero puede requerir licencias adicionales.
+          </td>
+        </tr>
+        <tr>
+          <td>Costo-Beneficio</td>
+          <td class="supermap">
+            Excelente relación costo-beneficio con una amplia gama de
+            funcionalidades integradas y un menor costo en comparación con ESRI.
+          </td>
+          <td class="qgis">
+            Código abierto y gratuito, pero puede requerir más inversión en
+            tiempo y recursos para alcanzar la misma funcionalidad.
+          </td>
+          <td class="esri">
+            Solución robusta, pero costosa debido a las licencias adicionales
+            requeridas para muchas funcionalidades avanzadas.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
